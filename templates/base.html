@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+    </style>
+    <style type="text/tailwindcss">
+        @theme {
+            --font-display: 'Josefin Sans', sans-serif;
+        }
+    </style>
+</head>
+<body class="h-[100svh] flex flex-col">
+    <nav class="h-16 bg-gray-800 text-gray-100 flex items-center justify-around font-display">
+        <h1 class="font-bold text-xl flex gap-2">
+            <span class="flex">
+                <span class="text-red-400">#</span>
+                <span>8</span>
+                <span class="text-red-400">7</span>
+                <span>8</span>
+                <span class="text-red-400">0</span>
+            </span>
+            🤝
+            <span class="text-green-500">sustainability</span>
+        </h1>
+        <ul class="flex gap-4">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <main class="bg-gray-100 flex-grow p-4 flex flex-col gap-4">
+        {% block Content %}{% endblock %}
+    </main>
+    <footer class="h-8 bg-red-400 text-gray-100 flex items-center justify-center">
+        TED Ankara #8780
+    </footer>
+</body>
+</html>
